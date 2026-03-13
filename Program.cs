@@ -11,8 +11,9 @@ namespace poligon20263_10A
         static void Main(string[] args)
         {
             // Balsa Andjic
-            tacka a = new tacka(1, 1);
+            tacka a = new tacka(-1, -1);
             Console.WriteLine(a.ugao());
+            Console.WriteLine(a.d());
         }
     }
 }
