@@ -11,6 +11,7 @@ namespace poligon20263_10A
         static void Main(string[] args)
         {
             // Balsa Andjic
+            Console.WriteLine("pozdrav za 3-10");
         }
     }
 }
