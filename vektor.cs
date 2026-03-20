@@ -31,7 +31,7 @@ namespace poligon20263_10A
         {
             tacka A = a.centriraj();
             tacka B = b.centriraj();
-            return A.x *B.x + A.y*B.y;
+            return A.x * B.x + A.y * B.y;
 
         }
         public static double VP(vektor a, vektor b)
@@ -41,6 +41,10 @@ namespace poligon20263_10A
             double k = A.x * B.y - A.y * B.x;
             return k;
         }
-
+        double duzina()
+        {
+            tacka finalna = this.centriraj();
+            return finalna.d();
+        }
     }
 }

@@ -69,5 +69,20 @@ namespace poligon20263_10A
             ulaz.Close();
             return novi;
         }
+        public vektor[] stranice()
+        {
+            vektor[] str = new vektor[br_temena];
+            for (int i=0;i<br_temena;i++)
+            {
+                str[i] = new vektor(teme[i], teme[i + 1]);
+            }
+            str[br_temena] = new vektor(teme[br_temena], teme[0]);
+            return str;
+
+        }
+        public double obim()
+        {
+            vektor
+        }
     }
 }
