@@ -22,6 +22,10 @@ namespace poligon20263_10A
             vektor AC = new vektor(A,C);
             Console.WriteLine(vektor.SP(OA, OB));
             Console.WriteLine(vektor.VP(OA, AC));
+            Console.WriteLine("Koliko temena?");
+            int n=Convert.ToInt32(Console.ReadLine());
+            poligon prvi = new poligon(n);
+            prvi.unos();
         }
     }
 }
