@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -32,6 +33,15 @@ namespace poligon20263_10A
                 teme[i].y= y;
             }
         }
-        
+        public void stampaj()
+        {
+            Console.WriteLine($"Poligon od {br_temena} temena: ");
+            int i = 1;
+            foreach (tacka tacka in teme)
+            {
+                Console.WriteLine($"A{i} ({tacka.x}, {tacka.y})");
+                i++;
+            }
+        }
     }
 }
