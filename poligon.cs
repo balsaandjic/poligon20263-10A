@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -42,6 +43,31 @@ namespace poligon20263_10A
                 Console.WriteLine($"A{i} ({tacka.x}, {tacka.y})");
                 i++;
             }
+        }
+        public void snimi()
+        {
+            StreamWriter izlaz = new StreamWriter("poligon.txt");
+            izlaz.WriteLine(br_temena);
+            
+            for (int i=0;i<br_temena;i++)
+            {              
+                izlaz.WriteLine(teme[i].x);
+                izlaz.WriteLine(teme[i].y);
+            }
+            izlaz.Close();
+        }
+        public static poligon ucitaj()
+        {
+            StreamReader ulaz = new StreamReader("poligon.txt");
+            int n = Convert.ToInt32(ulaz.ReadLine());
+            poligon novi = new poligon(n);
+            for (int i=0;i<n;i++)
+            {
+                novi.teme[i].x= Convert.ToDouble(ulaz.ReadLine());
+                novi.teme[i].y = Convert.ToDouble(ulaz.ReadLine());
+            }
+            ulaz.Close();
+            return novi;
         }
     }
 }
